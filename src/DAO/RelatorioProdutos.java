@@ -8,6 +8,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,7 +26,7 @@ public class RelatorioProdutos {
 
     private int quantidadeprodutos = 0;
 
-    public void SelectProduto(int idproduto) {
+    public void SelectProduto(int idproduto, String Inicial, String Final) {
 
         SelectQuantosProdutos();
 
@@ -39,7 +40,7 @@ public class RelatorioProdutos {
             java.sql.Statement st = conexao.createStatement();
 
             for (int i = 1; i <= quantidadeprodutos; i++) {
-                select = "select * from produtos where idproduto = " + idproduto;
+                select = "select * from produtos where idproduto = " + idproduto+" and datacadastro between '"+Inicial+"' and '"+Final+"'";
 
                 ResultSet result = st.executeQuery(select);
 

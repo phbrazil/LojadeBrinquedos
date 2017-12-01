@@ -25,7 +25,7 @@ public class BancoMySQL {
 
             Properties dados = new Properties();
             dados.put("user", "root");
-            dados.put("password", "admin");
+            dados.put("password", "adminadmin");
 
             connection = DriverManager.getConnection(url, dados);
         }

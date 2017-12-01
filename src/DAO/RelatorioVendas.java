@@ -23,7 +23,7 @@ public class RelatorioVendas {
     private String cpfcliente = "", datavenda = "";
     private double valor = 0;
 
-    public void SelectVendas(int idvenda) {
+    public void SelectVendas(int idvenda, String Inicial, String Final) {
 
         String select = "";
 
@@ -34,7 +34,7 @@ public class RelatorioVendas {
 
             java.sql.Statement st = conexao.createStatement();
 
-            select = "select * from vendas where idvenda = " + idvenda;
+            select = "select * from vendas where idvenda = " + idvenda+" and datavenda between '"+Inicial+"' and '"+Final+"'";
 
             ResultSet result = st.executeQuery(select);
 

@@ -12,6 +12,7 @@ import DAO.RelatorioClientes;
 import DAO.RelatorioProdutos;
 import DAO.RelatorioVendas;
 import java.security.Provider;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -149,7 +150,7 @@ public class RelatoriosTela extends javax.swing.JFrame {
             } else {
                 for (int i = 1; i <= relatorioproduto.SelectQuantosProdutos(); i++) {
 
-                    relatorioproduto.SelectProduto(i);
+                    relatorioproduto.SelectProduto(i,String.valueOf(jFormattedDataInicial.getText()).replace("/", "-"),String.valueOf(jFormattedDataFinal.getText()).replace("/", "-"));
                     jTableClientes.setValueAt(relatorioproduto.GetcodigoBarras(), linha, coluna);
                     coluna++;
                     jTableClientes.setValueAt(relatorioproduto.GetNomeProduto(), linha, coluna);
@@ -210,7 +211,7 @@ public class RelatoriosTela extends javax.swing.JFrame {
             } else {
                 for (int i = 1; i <= quantidadevendas; i++) {
 
-                    relatoriovendas.SelectVendas(i);
+                    relatoriovendas.SelectVendas(i,String.valueOf(jFormattedDataInicial.getText()).replace("/", "-"),String.valueOf(jFormattedDataFinal.getText()).replace("/", "-"));
                     jTableClientes.setValueAt(relatoriovendas.GetCPFCliente(), linha, coluna);
                     coluna++;
                     jTableClientes.setValueAt("R$" + relatoriovendas.GetValorVenda(), linha, coluna);
