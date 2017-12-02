@@ -21,8 +21,8 @@ public class LoginTela extends javax.swing.JFrame {
     public LoginTela() {
         initComponents();
 
-        jPasswordField1.setText("Insira a Senha");
-        JUsername.setText("");
+        jPasswordField1.setText("");
+        JUsername.setText("Insira o Usuário");
 
         ImageIcon TelaInicialGIF = new ImageIcon("Images/Login.chaves.png");
         JLoginInicial.setIcon(TelaInicialGIF);
