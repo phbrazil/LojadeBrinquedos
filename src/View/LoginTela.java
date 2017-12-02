@@ -21,7 +21,7 @@ public class LoginTela extends javax.swing.JFrame {
     public LoginTela() {
         initComponents();
 
-        jPasswordField1.setText("");
+        jPasswordField1.setText("Insira a Senha");
         JUsername.setText("");
 
         ImageIcon TelaInicialGIF = new ImageIcon("Images/Login.chaves.png");
@@ -39,8 +39,6 @@ public class LoginTela extends javax.swing.JFrame {
     private void initComponents() {
 
         JUsername = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         JLoginInicial = new javax.swing.JLabel();
@@ -48,21 +46,9 @@ public class LoginTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        JUsername.setText("jTextField1");
+        JUsername.setText("Insira o Usuário");
         getContentPane().add(JUsername);
         JUsername.setBounds(100, 90, 210, 30);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("Insira o usuário");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 70, 100, 21);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel2.setText("Insira a senha");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(100, 120, 213, 23);
 
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,9 +57,8 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(170, 180, 81, 29);
+        jButton1.setBounds(170, 180, 65, 23);
 
-        jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -174,8 +159,6 @@ public class LoginTela extends javax.swing.JFrame {
     private javax.swing.JLabel JLoginInicial;
     private javax.swing.JTextField JUsername;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }
